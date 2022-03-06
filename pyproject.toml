@@ -1,0 +1,52 @@
+[tool.briefcase]
+project_name = "Gullak"
+bundle = "com.android"
+version = "0.0.1"
+url = "https://android.com/gullak"
+license = "BSD license"
+author = 'Team Smurfs'
+author_email = "sj.shreyanshjain2002@gmail.com"
+
+[tool.briefcase.app.gullak]
+formal_name = "Gullak"
+description = "Analyse your spendings"
+icon = "src/gullak/resources/gullak"
+sources = ['src/gullak']
+requires = [
+]
+
+
+[tool.briefcase.app.gullak.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev32',
+    'std-nslog==1.0.0'
+]
+
+[tool.briefcase.app.gullak.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev32',
+]
+system_requires = [
+    'libgirepository1.0-dev',
+    'libcairo2-dev',
+    'libpango1.0-dev',
+    'libwebkitgtk-3.0-0',
+    'gir1.2-webkit-3.0',
+]
+
+[tool.briefcase.app.gullak.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev32',
+]
+
+# Mobile deployments
+[tool.briefcase.app.gullak.iOS]
+requires = [
+    'toga-iOS>=0.3.0.dev32',
+    'std-nslog==1.0.0'
+]
+
+[tool.briefcase.app.gullak.android]
+requires = [
+    'toga-android>=0.3.0.dev32'
+]
